@@ -53,24 +53,29 @@ html{
 
 
 .bubble1{
-  width:100px;
+  width:130px;
   height:50px;
   border-radius:50px 50px 50px 1px;
   background:white;
   position:fixed;
   left:calc(10% + 75px);
   bottom:calc(15% + 215px);
+  text-align:center;
+  align-items: center;
 }
 
 
 .bubble2{
-  width:100px;
+  width:130px;
   height:50px;
   border-radius:50px 50px 1px 50px;
   background:white;
   position:fixed;
   right:calc(10% + 75px);
   bottom: calc(15% + 215px);
+  text-align: center;
+  align-items: center;
+
 }
 
 .slogandisappear{
@@ -78,24 +83,26 @@ html{
 }
 
 @keyframes clashing1{
-  100%{
+  50%{
     left:50%;
   }
 }
 
 @keyframes clashing2{
-  100%{
+  50%{
     right:50%;
   }
 }
 
 .fighter1clash{
-  animation: clashing1 1s linear backwards;
+  animation: clashing1 1s linear forwards;
+  animation-delay: 4s;
 }
 
 
 .fighter2clash{
-  animation: clashing2 1s linear backwards;
+  animation: clashing2 1s linear forwards;
+  animation-delay: 4s;
 }
 
 .fight{
@@ -109,6 +116,7 @@ html{
   text-align: center;
   align-items: center;
   animation:fightani 2s infinite ease-in-out;
+
 }
 
 @keyframes fightani{
@@ -143,4 +151,37 @@ html{
   background:gray;
   text-align: center;
   font-size:2rem;
+}
+
+
+.sloganremove{
+  animation: sloremov 2s linear forwards;
+  animation-delay:2s;
+}
+
+@keyframes sloremov{
+  100%{opacity:0;}
+}
+
+.visible{
+  animation: results 6s linear forwards;
+  animation-delay:6s;
+}
+
+@keyframes results{
+  100%{opacity:1;}
+}
+
+.results1{
+  position:fixed;
+  top:200px;
+  font-size:2rem;
+  font-weight:bolder;
+  left:calc(50% - 125px);
+  width:250px;
+  height:50px;
+  border:3px dotted yellow;
+  opacity:0;
+  text-align:center;
+
 }
