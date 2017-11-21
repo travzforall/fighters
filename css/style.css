@@ -104,14 +104,43 @@ html{
   position:fixed;
   top:25px;
   left:calc(50% - 150px);
+  color:red;
+  font-size:2rem;
+  text-align: center;
+  align-items: center;
+  animation:fightani 2s infinite ease-in-out;
 }
 
-.divstat1{
+@keyframes fightani{
+  50%{transform: scale(1.1)}
+  100%{transform: scale(1)}
+}
+
+.fighttext{
+
+}
+
+
+.divstats1{
   position:fixed;
-  
+  left:2%;
+  top:80px;
+  width:300px;
+  height:100px;
+  background:gray;
+  text-align: center;
+  font-size:2rem;
+
 }
 
 
-.divstat1{
-
+.divstats2{
+  position:fixed;
+  right:2%;
+  top:80px;
+  width:300px;
+  height:100px;
+  background:gray;
+  text-align: center;
+  font-size:2rem;
 }
