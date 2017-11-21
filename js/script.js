@@ -16,7 +16,13 @@ class Fighter {
                   "Don't worry, Pain is just weakness leaving your body!!",
                   "I will win!! Whatever it takes",
                   "If you haven't seen the lights, you haven't wrestled me yet",
-                  "It's time for your DOOM!!!"];
+                  "It's time for your DOOM!!!",
+                  "You will serve Hard Time!!",
+                  "Can you dig it Sucka?!!",
+                  "I'm the best in the word at what I do",
+                  "Welcome to Raw is " + this.name,
+                  "You can't see me!!!"];
+
     return slogans[getRandomInt(0, slogans.length - 1)];
   }
 
@@ -25,12 +31,19 @@ class Fighter {
 }
 
 
+function Battle(fighter1, fighter2) {
 
+  fighter1.life = (fighter1.life + fighter1.resistance) - fighter2.damage;
+  fighter2.life = (fighter2.life + fighter2.resistance) - fighter1.damage;
+
+}
 
 var Danny = new Fighter("The Dagger", "Dagger", "Steel");
+var Travon = new Fighter("Hawk", "Bazooka", "Cloth");
 
 
-console.log(Danny);
+Battle(Danny, Travon);
+
 
 
 
