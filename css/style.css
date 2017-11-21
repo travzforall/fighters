@@ -89,12 +89,12 @@ html{
   }
 }
 
-.fighter1:active{
+.fighter1clash{
   animation: clashing1 1s linear backwards;
 }
 
 
-.fighter2:active{
+.fighter2clash{
   animation: clashing2 1s linear backwards;
 }
 
