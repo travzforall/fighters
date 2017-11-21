@@ -1,3 +1,117 @@
 *{
   box-sizing: border-box;
 }
+
+html{
+  background:blue;
+}
+
+/*.ring{
+  width: 400px;
+  height: 500px;
+  background: red;
+  position:fixed;
+  bottom:10%;
+  left:20%;
+  transform: skew(-30deg);
+}
+
+.ring2{
+  width: 400px;
+  height: 500px;
+  position:fixed;
+  bottom:10%;
+  right:20%;
+  background: red;
+  transform: skew(30deg);
+}
+
+
+
+.ringring{
+
+}*/
+
+.fighter1{
+  width:70px;
+  height:210px;
+  background:black;
+  position:fixed;
+  left:10%;
+  bottom:15%;
+}
+
+
+.fighter2{
+  width:70px;
+  height:210px;
+  background:black;
+  position:fixed;
+  right:10%;
+  bottom:15%;
+}
+
+
+.bubble1{
+  width:100px;
+  height:50px;
+  border-radius:50px 50px 50px 1px;
+  background:white;
+  position:fixed;
+  left:calc(10% + 75px);
+  bottom:calc(15% + 215px);
+}
+
+
+.bubble2{
+  width:100px;
+  height:50px;
+  border-radius:50px 50px 1px 50px;
+  background:white;
+  position:fixed;
+  right:calc(10% + 75px);
+  bottom: calc(15% + 215px);
+}
+
+.slogandisappear{
+  display:none;
+}
+
+@keyframes clashing1{
+  100%{
+    left:50%;
+  }
+}
+
+@keyframes clashing2{
+  100%{
+    right:50%;
+  }
+}
+
+.fighter1:active{
+  animation: clashing1 1s linear backwards;
+}
+
+
+.fighter2:active{
+  animation: clashing2 1s linear backwards;
+}
+
+.fight{
+  width:300px;
+  height:50px;
+  position:fixed;
+  top:25px;
+  left:calc(50% - 150px);
+}
+
+.divstat1{
+  position:fixed;
+  
+}
+
+
+.divstat1{
+
+}
