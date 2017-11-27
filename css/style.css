@@ -3,7 +3,7 @@
 }
 
 html{
-  background:blue;
+  background:black;
 }
 
 /*.ring{
@@ -32,51 +32,105 @@ html{
 
 }*/
 
+#field {
+  background-image: url("../images/background1.gif");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#winner {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+}
+
+#winner img {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+}
+
 .fighter1{
-  width:70px;
-  height:210px;
-  background:black;
+  width: 20%;
+  max-width: 250px;
+  height: 200px;
   position:fixed;
   left:10%;
-  bottom:15%;
+  bottom: 5%;
+  background: transparent;
 }
 
 
 .fighter2{
-  width:70px;
-  height:210px;
-  background:black;
+  width: 20%;
+  max-width: 250px;
+  height: 200px;
   position:fixed;
   right:10%;
-  bottom:15%;
+  bottom: 5%;
+  background: transparent;
 }
 
+.show {
+  display: block;
+}
+
+.fighter1 img  {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 210px;
+}
+
+.fighter2 img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  height: 200px;
+ 
+}
+
+.turnH {
+   transform: scaleX(-1);
+  filter: FlipH;
+}
 
 .bubble1{
-  width:130px;
-  height:50px;
-  border-radius:50px 50px 50px 1px;
-  background:white;
-  position:fixed;
+  border-radius: 100px 100px 100px 1px;
   left:calc(10% + 75px);
-  bottom:calc(15% + 215px);
-  text-align:center;
-  align-items: center;
+  bottom:calc(15% + 125px);
+
 }
 
 
 .bubble2{
-  width:130px;
-  height:50px;
   border-radius:50px 50px 1px 50px;
-  background:white;
-  position:fixed;
   right:calc(10% + 75px);
-  bottom: calc(15% + 215px);
-  text-align: center;
-  align-items: center;
-
+  bottom: calc(15% + 125px);
 }
+
+.bubble {
+  width:175px;
+  padding: 15px;
+  background: white;
+  border: 2px solid black;
+  position:fixed;
+  text-align:center;
+  color: purple;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
 
 .slogandisappear{
   display:none;
@@ -84,25 +138,38 @@ html{
 
 @keyframes clashing1{
   50%{
-    left:50%;
+    left:39%;
   }
 }
 
+.fadeIn {
+  animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @keyframes clashing2{
   50%{
-    right:50%;
+    right:39%;
   }
 }
 
 .fighter1clash{
-  animation: clashing1 1s linear forwards;
-  animation-delay: 4s;
+  animation: clashing1 4s linear forwards;
 }
 
 
 .fighter2clash{
-  animation: clashing2 1s linear forwards;
-  animation-delay: 4s;
+  animation: clashing2 4s linear forwards;
 }
 
 .fight{
@@ -115,7 +182,7 @@ html{
   font-size:2rem;
   text-align: center;
   align-items: center;
-  animation:fightani 2s infinite ease-in-out;
+  /* animation:fightani 2s infinite ease-in-out; */
 
 }
 
@@ -124,21 +191,17 @@ html{
   100%{transform: scale(1)}
 }
 
-.fighttext{
-
-}
 
 
 .divstats1{
   position:fixed;
   left:2%;
   top:80px;
-  width:300px;
-  height:100px;
+  padding: 10px;
   background:gray;
   text-align: center;
-  font-size:2rem;
-
+  font-size: 1.5rem;
+  transition: 3s;    
 }
 
 
@@ -146,13 +209,15 @@ html{
   position:fixed;
   right:2%;
   top:80px;
-  width:300px;
-  height:100px;
+  padding: 10px;
   background:gray;
   text-align: center;
-  font-size:2rem;
+  font-size: 1.5rem;
 }
 
+.hidden {
+  opacity: 0;
+}
 
 .sloganremove{
   animation: sloremov 2s linear forwards;
@@ -174,14 +239,16 @@ html{
 
 .results1{
   position:fixed;
+  background-color: green;
   top:200px;
   font-size:2rem;
   font-weight:bolder;
   left:calc(50% - 125px);
   width:250px;
   height:50px;
-  border:3px dotted yellow;
+  border:3px solid yellow;
   opacity:0;
   text-align:center;
+  transition: .5s;
 
 }

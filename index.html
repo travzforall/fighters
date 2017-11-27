@@ -8,34 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Sosa</title>
+    <title>Team Fighter</title>
 
   </head>
 
   <body>
-    <div class="ringring">
-      <div class="ring">
+
+    <div id="field">
+      <div id = "fight1" class ="fighter1">
+        <div class="bubble bubble1 hidden" id = "slogan1">
+            </div>
+        <img src="images/running1.gif" alt="fighter1"  class="running hidden">
+        <img src="images/stance1.gif" alt="fighter1" class="stance show">
       </div>
-      <div class="ring2">
+      
+      <div id = "fight2" class="fighter2" >
+        <div class = "bubble bubble2 hidden" id="slogan2">
+        </div>
+        <img src="images/running2.gif" alt="fighter2" class="running hidden turnH">
+        <img src="images/stance2.gif" alt="fighter2" class="stance show">
       </div>
+  </div>
+
+    <div id="winner">
+      <img src="images/fighter1win.gif" alt="" class="winner1 hidden">
+      <img src="images/fighter2win.png" alt="" class="winner2 hidden">
     </div>
-
-    <div id = "fight1" class ="fighter1">
-      <div class="bubble1" id = "slogan1">
-
-      </div>
-    </div>
-
-
-    <div id = "fight2" class="fighter2" >
-      <div class = "bubble2" id="slogan2">
-
-
-
-
-      </div>
-    </div>
-
 
     <button id="fightbutton" class="fight">
       FIGHT
@@ -47,20 +45,20 @@
 
 
 
-      <div id="stats1" class="divstats1">
-        Stats
-
+      <div id="stats1" class="stats divstats1 hidden">
+      Fighter:  <span class="fightinfo"> </span> <br>
+      Super Move: <span class="moveinfo"> </span> <br>
+      Wins:  <span class="wininfo"> </span>
       </div>
     </div>
 
 
     <div>
 
-
-
-      <div id="stats2" class="divstats2">
-        Stats
-
+      <div id="stats2" class="stats divstats2 hidden">
+          <p>Fighter:  <span class="fightinfo"> </span></p>
+          <p>Super Move: <span class="moveinfo"> </span></p>
+          <p>Wins:  <span class="wininfo"> </span></p>
       </div>
 
     </div>
